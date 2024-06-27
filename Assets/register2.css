@@ -19,8 +19,8 @@ h1 {
 }
 
 .form-group {
-    margin-bottom: 15px;
-    width: 90%;
+    margin-bottom: 5px;
+    width: 80%;
 }
 
 label {
@@ -43,10 +43,10 @@ small{
     align-items: center;
 }
 
-.form_inputs{
-    width: 90%;
+#registration-form .form_inputs{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 input{
     width: 100%;
@@ -74,6 +74,7 @@ button:hover {
 
 .users_section{
     width: 100%;
+    padding: 10px 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,16 +100,16 @@ span{
 }
 
 table {
-    width: 80%; /* Adjust as needed */
-    margin: 20px auto;
+    width: 100%; /* Adjust as needed */
+    margin: 10px 0;
   }
   
   tr {
     border: 1px solid #ddd;
-    padding: 10px; /* Adjust as needed */
+    padding: 5px; /* Adjust as needed */
   }
   tbody{
-    column-gap: 10px;
+    column-gap: 5px;
   }
   thead {
     background-color: #130101;
@@ -117,12 +118,12 @@ table {
   }
 
   th, td {
-    padding: 10px;
+    padding: 4px;
     text-align: left;
   }
   
   th {
-    padding: 5px; /* Adjust as needed */
+    padding: 2px; /* Adjust as needed */
     font-weight: bold; /* Make header text slightly bolder */
   }
   
@@ -133,12 +134,75 @@ table {
   tbody td:nth-child(2) {
     width: 25%;
   }
+  thead th:nth-child(6),
+  tbody td:nth-child(6) {
+    width: 2%;
+  }
+  thead tr{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 400;
+  }
   tbody tr{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
   }
   tbody tr:nth-child(even) {
     background-color: #edf3fd; /* Very light gray background */
   }
+
+
+  @media screen and (min-width: 768px){
+    .container #registration-form{
+      width: 100%;
+      padding: 10px;
+  }
   
+  .container .form_inputs{
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .container input{
+      width: 100%;
+      padding: 10px;
+  }
+  .container .form-group{
+    margin-bottom: 15px;
+    width: 90%;
+  }
+  .container table {
+    margin: 20px auto;
+  }
+  .container tr {
+    padding: 10px; /* Adjust as needed */
+  }
+  .container table tbody{
+    column-gap: 10px;
+  }
+  .container table thead {
+    background-color: #130101;
+    text-align: left;
+    color: #FDFDFD;
+  }
+
+  .container table th, td {
+    padding: 10px;
+  }
+  
+  .container table th {
+    padding: 5px; /* Adjust as needed */
+    font-weight: bold; /* Make header text slightly bolder */
+  }
+  .container  tbody tr{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .container   thead tr{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  }
