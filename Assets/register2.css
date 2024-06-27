@@ -78,7 +78,7 @@ button:hover {
 
 .users_section{
     width: 100%;
-    padding: 10px 0 20px 0;
+    padding: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +162,11 @@ table {
       width: 100%;
       padding: 10px;
   }
-  
+
+   .container .users_section{
+    width: 100%;
+    padding: 10px 0 20px 0;
+    }
   .container .form_inputs{
       width: 90%;
       display: grid;
