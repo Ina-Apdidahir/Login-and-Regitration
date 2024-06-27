@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Assets/register2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registration-form">
+            <div class="form_inputs">
+                <div class="form-group">
+                    <label for="Id">Id:</label>
+                    <input type="text" id="Id" name="Id" aria-required="false">
+                    <small id="id_error" class="errorMessage">Please enter Id</small>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <small id="nam_error" class="errorMessage">Please enter name</small>
+                </div>
+                <div class="form-group">
+                    <label for="Gender">Gender:</label>
+                    <input type="text" id="Gender" name="Gender" required>
+                    <small id="gen_error" class="errorMessage">Please enter Gender</small>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone:</label>
+                    <input type="tel" id="Phone" name="Phone" required>
+                    <small id="pho_error" class="errorMessage">Please enter Phone number</small>
+                </div>
+                <div class="form-group">
+                    <label for="Faculty">Faculty:</label>
+                    <input type="text" id="Faculty" name="Faculty" required>
+                    <small id="fac_error" class="errorMessage">Please enter Faculty</small>
+                </div>
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input type="text" id="Semester" name="Semester" required>
+                    <small id="sems_error" class="errorMessage">Please enter Semester</small>
+                </div>
+            </div>
+            <button type="submit" id="Register">Register</button>
+        </form>
+        <div class="users_section">
+            <table >
+                <thead id="table_head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Phone</th>
+                        <th>Faculty</th>
+                        <th>Semester</th>
+                    </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="Assets/register.js"></script>
+</body>
+
+</html>

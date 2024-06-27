@@ -1,0 +1,156 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../Imgs/IMG_20240511_180334.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
+.Form_container{
+    width: 400px;
+    height: 520px;
+    padding: 10px;
+    background: hsl(240, 92%, 70%);
+    /* background: #b0cee0; */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sing_up_Form{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sing_up_Form p{
+    cursor: pointer;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+.Form{
+    width: 100%;
+    height: 75%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputs{
+    width: 75%;
+    padding: 5px 0;
+    background: hsl(255, 100%, 100%);
+    border-radius: 10px;
+}
+.inputs .Form_data{
+    width: 100%;
+    position: relative;
+}
+.Form_data .Icons{
+    position: absolute;
+    width: 17px;
+    top: 16px;
+    left: 5px;
+}
+
+.Form_data .Hide,
+.Form_data .View{
+    cursor: pointer;
+    position: absolute;
+    width: 17px;
+    top: 19px;
+    right: 10px;
+    transition: ease 0.4s;
+}
+
+.Form_data .View{
+    display: none;
+}
+
+.inputs .Form_data .error{
+    border-top: 1px solid #f54a4a;
+    border-bottom: 1px solid #f54a4a;
+}
+.inputs .Form_data input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    margin: 7px 0;
+    border: 1px solid hsla(0, 0%, 5%, 0.046);
+}
+.inputs .Form_data input:focus {
+    border: 1px solid hsla(0, 0%, 5%, 0.046);
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px 120px;
+    /* background: hsla(257, 94%, 6%, 0.301); */
+    background: #42545e;
+    color: #FFFFFF;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    transition: box-shadow .4s;
+}
+button:hover {
+    box-shadow: 0 2px 14px hsla(197, 43%, 17%, 0.4);
+  }
+
+
+
+.Login_Form{
+    background: hsl(250, 46%, 95%);
+    border-radius: 50% 50% 0 0;
+    width: 600px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -100px;
+    top: 435px;
+    /* transform: translateY( 2rem);
+    transition: transform 0.4s; */
+    transition: ease 0.4s;
+}
+.Login_Form p{
+    cursor: pointer;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.Login_Form .inputs{
+    width: 50%;
+    padding: 5px 0;
+    background: hsl(255, 100%, 100%);
+    border-radius: 10px;
+}
+
+.Login_Form .Form{
+    width: 100%;
+    height: 75%;
+}
+

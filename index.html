@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;800;900&family=Anta&family=Poppins:wght@200;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+    <title>Login Form</title>
+    <link rel="stylesheet" href="Assets/styles.css">
+</head>
+
+<body>
+    <div class="Form_container">
+        <div class="sing_up_Form">
+            <p class="sing_up">Sign Up</p>
+            <div class="Form">
+
+                <div class="inputs">
+                    <div class="Form_data">
+                        <input type="text" name="Name" placeholder="Name" id="Name">
+                        <img src="Imgs/user.png" alt="" class="Icons">
+                    </div>
+                    <div class="Form_data">
+                        <input type="text" name="Email" placeholder="Email" id="Email">
+                        <img src="Imgs/mail.png" alt="" class="Icons">
+                    </div>
+                    <div class="Form_data">
+                        <input type="password" name="Password" placeholder="Password" id="Passwords">
+                        <img src="Imgs/padlock.png" alt="" class="Icons">
+                        <img src="Imgs/eye.png" alt="" class="Hide" onclick=Hide()>
+                        <img src="Imgs/view.png" alt="" class="View show" onclick=view()>
+                    </div>
+                </div>
+
+                <div class="Form_data">
+                    <button id="Registerbtn">Sign Up</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Login_Form" id="loginForm">
+            <p class="login">Login</p>
+            <div class="Form">
+
+                <div class="inputs">
+                    <div class="Form_data">
+                        <input type="text" name="Email" placeholder="Email" id="LogEmail" class="">
+                        <img src="Imgs/user.png" alt="" class="Icons">
+                    </div>
+                    <div class="Form_data">
+                        <input type="password" name="Password" placeholder="Password" id="LogPassword" class="">
+                        <img src="Imgs/padlock.png" alt="" class="Icons">
+                        <img src="Imgs/eye.png" alt="" class="Hide" onclick=Hide()>
+                        <img src="Imgs/view.png" alt="" class="View" onclick=view()>
+                    </div>
+                </div>
+
+                <div class="Form_data">
+                    <button id="Login" type="submit">Login</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const login = document.querySelector('.login')
+        const sing_up_txt = document.querySelector('.sing_up')
+        const Login_Form = document.querySelector('.Login_Form')
+
+
+        const hideElements = document.querySelectorAll('.Hide');
+        const viewElements = document.querySelectorAll('.View');
+        const Passwords = document.querySelectorAll('#LogPassword');
+
+        Hide()
+        view()
+
+        function view() {
+            hideElements.forEach(element => element.style.display = 'inline');
+            viewElements.forEach(element => element.style.display = 'none');
+            Passwords.forEach(Password => Password.type = "password");
+        }
+        function Hide() {
+            hideElements.forEach(element => element.style.display = 'none');
+            viewElements.forEach(element => element.style.display = 'inline');
+            Passwords.forEach(Password => Password.type = "text");
+        }
+
+        login.addEventListener('click', () => {
+            Login_Form.style.top = '60px'
+        })
+        sing_up_txt.addEventListener('click', () => {
+            Login_Form.style.top = "435px"
+        })
+
+        const Registerbtn = document.getElementById('Registerbtn')
+
+        const LogEmail = document.getElementById('LogEmail');
+        const LogPassword = document.getElementById('LogPassword'); // Corrected typo
+        const LoginButton = document.getElementById('Login'); // Assuming a button with ID 'Login'
+
+        LoginButton.addEventListener('click', validateLogin); // Targeted event listener
+
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let pass = LogPassword.value
+            // let isValid = true; // Flag for overall validation
+            if (LogEmail.value.trim() === '') {
+                LogEmail.classList.add('error'); // Corrected class name for consistency
+                console.log("Email field is empty");
+            }else if (LogPassword.value.trim() === '') {
+                LogPassword.classList.add('error');
+                console.log("Password field is empty");
+            } else  if(LogEmail.value.trim() === "test@gmail.com" && LogPassword.value.trim() === pass){
+                console.log('Login secussfully')
+                window.location.href = 'register2.html'
+            } else{
+                console.log('error')
+
+            } 
+        }
+    </script>
+
+   
+</body>
+
+</html>
